@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+
+  "name": "这是zc开发的采集插件",
+  "description": "众图网内部人员使用,花瓣采集工具.版本2.2(今日新图采集),能快速的将众图网上的图片采集到花瓣网.",
+  "version": "2.2",
+
+  "permissions": [
+    "*://*/*",
+    "contextMenus",
+    "notifications",
+    "storage",
+    "activeTab",
+    "\u003Call_urls>",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "js": ["/js/script.js"],
+      "matches": [
+        "http://huaban.com/bookmarklet_multiple/*",
+        "https://huaban.com/bookmarklet_multiple/*"
+      ]
+    },
+    {
+      "js": ["/js/ztupic.js", "/js/jquery-3.5.1.js"],
+      "matches": [
+        "https://www.ztupic.com/*",
+        "https://www.ztupic.com/*",
+        "http://pic.tt/*"
+      ]
+    },
+    {
+      "js": ["/js/jquery-3.5.1.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}

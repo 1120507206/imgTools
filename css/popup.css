@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "helvetica neue", arial, sans-serif;
+  user-select: none;
+  width: 250px;
+  background: #fff;
+}
+
+.test {
+  height: 250px;
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+}
+.test-item {
+  margin: 15px;
+}
+.test-input {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.test-button {
+  /* background: url(/img/bg12.jpg) no-repeat left top; */
+  background-color: #409eff;
+  color: #fff;
+}
